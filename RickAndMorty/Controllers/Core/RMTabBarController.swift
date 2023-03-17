@@ -21,7 +21,6 @@ final class RMTabBarController: UITabBarController {
         let settingsVC  = RMSettingsViewController(image: "gear")
         let locationsVC  = RMLocationViewController(image: "globe")
         let episodesVC  = RMEpisodeViewController(image: "tv")
-        print(characterVC.image)
         
         let navControllers = [characterVC,locationsVC,episodesVC,settingsVC].enumerated().map { (index,vc) in
             vc.view.backgroundColor = .systemBackground
@@ -43,15 +42,4 @@ final class RMTabBarController: UITabBarController {
 
 
 
-class TabViewController: UIViewController {
-    var image: String
-    
-    init(image:String){
-        self.image = image
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
+
